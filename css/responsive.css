@@ -1,0 +1,954 @@
+@media screen and (max-width: 576px) {
+
+  /* 576pxまでの幅の場合に適応される */
+
+  body {
+    width: auto;
+  }
+
+  .page {
+    width: auto;
+  }
+
+  .base {
+    width: auto;
+  }
+
+
+  /* ---------------------------------
+ハンバーガーメニュー用
+-----------------------------------*/
+  /*========= ナビゲーションのためのCSS ===============*/
+
+  #g-nav {
+    display: block;
+    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    /*はじめは透過0*/
+    /*ナビの位置と形状*/
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    /*ナビの高さ*/
+    background: #4E0101;
+    /*動き*/
+    transition: all 0.3s;
+  }
+
+  /*アクティブクラスがついたら透過なしにして最前面へ*/
+  #g-nav.panelactive {
+    opacity: 1;
+    z-index: 999;
+  }
+
+  /*ナビゲーション*/
+  #g-nav ul {
+    display: none;
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #g-nav.panelactive ul {
+    display: block;
+  }
+
+
+  /*========= ボタンのためのCSS ===============*/
+  .openbtn {
+    position: fixed;
+    z-index: 9999;
+    /*ボタンを最前面に*/
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+
+  /*×に変化*/
+  .openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #A26D1A;
+    width: 45%;
+  }
+
+  .openbtn span:nth-of-type(1) {
+    top: 15px;
+  }
+
+  .openbtn span:nth-of-type(2) {
+    top: 23px;
+  }
+
+  .openbtn span:nth-of-type(3) {
+    top: 31px;
+  }
+
+  .openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+
+  .openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+
+
+
+
+  /* -----------------------------------
+アコーディオンメニューのCSS
+------------------------------------*/
+  .s_07 {
+    width: auto;
+    margin-top: 30px;
+  }
+
+  .s_07 .accordion_one {
+    /* max-width: 1024px; */
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .s_07 .accordion_one .accordion_header {
+    background-color: #4E0101;
+    border-bottom: 1px solid #A26D1A;
+    color: #A26D1A;
+    font-size: 18px;
+    font-family: 'Rye', cursive;
+    padding: 20px 11%;
+    text-align: center;
+    position: relative;
+    z-index: +1;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    margin-bottom: -5px;
+  }
+
+  .s_07 .accordion_one:nth-of-type(1) .accordion_inner .accordion_header {
+    background-color: #4E0101;
+  }
+
+  .s_07 .accordion_one:nth-of-type(1) .accordion_inner .accordion_inner .accordion_header {
+    background-color: #4E0101;
+  }
+
+  .s_07 .accordion_one:nth-of-type(2) .accordion_header {
+    background-color: #4E0101;
+  }
+
+  .s_07 .accordion_one:nth-of-type(2) .accordion_inner .accordion_header {
+    background-color: #4E0101;
+  }
+
+  .s_07 .accordion_one:nth-of-type(2) .accordion_inner .accordion_inner .accordion_header {
+    background-color: #4E0101;
+  }
+
+  .s_07 .accordion_one:nth-of-type(3) .accordion_header {
+    background-color: #4E0101;
+  }
+
+  .s_07 .accordion_one:nth-of-type(3) .accordion_inner .accordion_header {
+    background-color: #4E0101;
+  }
+
+  .s_07 .accordion_one:nth-of-type(3) .accordion_inner .accordion_inner .accordion_header {
+    background-color: #4E0101;
+  }
+
+  .s_07 .accordion_one .accordion_header:hover {
+    opacity: .8;
+  }
+
+
+
+  .s_07 .accordion_one .accordion_header .i_box .one_i {
+    display: block;
+    width: 18px;
+    height: 18px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transform-origin: center center;
+    transition-duration: 0.2s;
+    position: relative;
+  }
+
+  /* ----------------------------
+下の行はクリックしていない時は閉じている指示
+-----------------------------*/
+  .s_07 .accordion_one .accordion_inner {
+    display: none;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .s_07 .accordion_one .accordion_inner .box_one {
+    height: 300px;
+  }
+
+  .s_07 .accordion_one .accordion_inner p.txt_a_ac {
+    margin: 0;
+  }
+
+
+  /* ----------------------------------
+  トップページ
+-------------------------------------*/
+
+  #home header {
+    width: auto;
+  }
+
+  #home header nav.only-pc {
+    padding: 0;
+    width: auto;
+    display: none;
+  }
+
+  #home header nav.only-pc ul {
+    display: block;
+    width: auto;
+    padding: 0;
+  }
+
+  #home header nav.only-pc li {
+    display: block;
+    padding: 0;
+  }
+
+  #home main .page-top h1 {
+    font-size: 60px;
+    line-height: 1.4;
+    padding: 80px 0 150px 0;
+  }
+
+  #home main .eyecatch .contents .line {
+    width: auto;
+  }
+
+  #home .base {
+    width: auto;
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+
+  #home .concept h3 {
+    padding: 20px;
+  }
+
+  #home .concept h3 br {
+    display: none;
+  }
+
+  #home main .text p {
+    writing-mode: lr-tb;
+    padding: 10px 20px;
+  }
+
+  #home main .text br {
+    display: none;
+  }
+
+  #home main section.photo p {
+    margin: 0 auto 20px auto;
+  }
+
+  #home main section.photo h2 {
+    line-height: 1.2;
+  }
+
+  #home main section.photo .deco {
+    display: none;
+  }
+
+  #home main section.menu1 {
+    display: block;
+  }
+
+  #home main section.menu1 .left {
+    width: auto;
+    border: none;
+  }
+
+  #home main section.menu1 .right {
+    width: auto;
+  }
+
+  #home main section.menu1 .right .innerbox {
+    margin-bottom: 30px;
+  }
+
+  #home main section.menu2 {
+    flex-direction: column-reverse;
+  }
+
+  #home main section.menu2 .left {
+    width: auto;
+  }
+
+  #home main section.menu2 .left .innerbox {
+    margin-bottom: 30px;
+  }
+
+  #home main section.menu2 .right {
+    border: none;
+    width: auto;
+  }
+
+  #home .global-nav ul {
+    display: block;
+    width: auto;
+  }
+
+  #home .global-nav ul li h2 {
+    margin-bottom: 15px;
+  }
+
+  #home .global-nav ul li p {
+    margin-bottom: 45px;
+  }
+
+  #home footer {
+    display: block;
+  }
+
+  #home footer h1 {
+    font-size: 70px;
+    line-height: 1.4;
+    margin: 0 auto;
+  }
+
+  #home footer .window-bottom {
+    position: relative;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  #home footer .scrolldown3 {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+  }
+
+  #home footer .bottom-box {
+    margin-top: 150px;
+  }
+
+  #home footer .bottom-box .point {
+    position: relative;
+    top: -110px;
+    left: 200px;
+    width: 10px;
+    height: 10px;
+  }
+
+  #home footer .bottom-box .bottom-wrapper {
+    display: block;
+    padding: 0;
+    width: auto;
+    margin: 0;
+  }
+
+  #home footer .bottom-box .bottom-wrapper p {
+    margin-bottom: 30px;
+  }
+
+  #home footer .bottom-box .bottom-wrapper address {
+    margin-bottom: 50px;
+  }
+
+  #home footer .navi ul {
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  #home footer .navi ul li {
+    width: 50%;
+  }
+
+
+
+  /* ----------------------------------
+メニューページ
+------------------------------------*/
+
+
+  #menu header {
+    display: none;
+    width: auto;
+  }
+
+  #menu header nav.only-pc {
+    padding: 0;
+    width: auto;
+  }
+
+  #menu header nav.only-pc ul {
+    width: auto;
+    padding: 0;
+  }
+
+  #menu header nav.only-pc li {
+    padding: 0;
+  }
+
+  #menu .eyecatch-menu {
+    width: 360px;
+
+  }
+
+  #menu img.eyecatch-menu {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+  }
+
+  #menu .circle-menu {
+    width: 300px;
+  }
+
+  #menu .title-box {
+    display: block;
+    padding: 10px;
+    width: auto;
+  }
+
+  #menu .title-box h3 {
+    margin-bottom: 30px;
+  }
+
+  #menu .title-box .box-right {
+    width: auto;
+    padding: 10px;
+  }
+
+  #menu .title-box .box-right h2 {
+    font-size: 30px;
+  }
+
+  #menu td,
+  th {
+    font-size: 20px;
+    display: block;
+    width: auto;
+  }
+
+  #menu section.buffet .buffet-top {
+    width: auto;
+    display: block;
+  }
+
+
+  #menu section.buffet .left {
+    width: auto;
+  }
+
+  #menu section.buffet .left img {
+    width: 330px;
+    margin: 0 5px;
+  }
+
+  #menu section.buffet .right {
+    padding: 10px;
+  }
+
+  #menu section.buffet .buffet-top .right .point {
+    width: 10px;
+    height: 10px;
+  }
+
+  #menu section.buffet .buffet-top .right .point:after {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  #menu .buffet-bottom {
+    display: block;
+    width: auto;
+  }
+
+  #menu .buffet-bottom img {
+    width: 330px;
+    margin: 0 auto;
+  }
+
+  #menu .buffet-bottom .right {
+    margin-left: 0;
+  }
+
+  #menu section.buffet .buffet-bottom .right .point {
+    width: 10px;
+    height: 10px;
+  }
+
+  #menu section.buffet .buffet-bottom .right .point:after {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  #menu .global-nav {
+    width: auto;
+  }
+
+  #menu .global-nav ul {
+    display: block;
+    width: auto;
+  }
+
+  #menu .global-nav ul li h2 {
+    margin-bottom: 15px;
+  }
+
+  #menu .global-nav ul li p {
+    margin-bottom: 45px;
+  }
+
+  #menu footer {
+    display: block;
+  }
+
+  #menu footer h1 {
+    font-size: 70px;
+    line-height: 1.4;
+    margin: 0 auto;
+  }
+
+  #menu footer .window-bottom {
+    position: relative;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  #menu footer .scroll {
+    position: relative;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  #menu footer .scrolldown3 {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+  }
+
+  #menu footer .bottom-box {
+    margin-top: 150px;
+  }
+
+  #menu footer .bottom-box .point {
+    position: relative;
+    top: -110px;
+    left: 200px;
+    width: 10px;
+    height: 10px;
+  }
+
+  #menu footer .bottom-box .bottom-wrapper {
+    display: block;
+    padding: 0;
+    width: auto;
+    margin: 0;
+  }
+
+  #menu footer .bottom-box .bottom-wrapper p {
+    margin-bottom: 30px;
+  }
+
+  #menu footer .bottom-box .bottom-wrapper address {
+    margin-bottom: 50px;
+  }
+
+  #menu footer .navi ul {
+    flex-wrap: wrap;
+  }
+
+  #menu footer .navi ul li {
+    width: 50%;
+  }
+
+
+
+  /* --------------------------------------
+  ルームページ
+  ---------------------------------------*/
+
+
+
+  #room header {
+    display: none;
+    width: auto;
+  }
+
+  #room header nav.only-pc {
+    padding: 0;
+    width: auto;
+  }
+
+  #hroom header nav.only-pc ul {
+    display: block;
+    width: auto;
+    padding: 0;
+  }
+
+  #room header nav.only-pc li {
+    display: block;
+    padding: 0;
+  }
+
+  #room .eyecatch-room img {
+    width: auto;
+  }
+
+  #room .concept {
+    width: auto;
+  }
+
+  #room .concept p {
+    font-size: 14px;
+    color: #a26d1a;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  #room .concept img {
+    width: 300px;
+  }
+
+  #room .concept .title-box {
+    display: block;
+    width: auto;
+    margin: -80px 0 400px 0;
+  }
+
+  #room .concept .title-box h3 {
+    padding-left: 10px;
+  }
+
+  #room .concept .title-box .box-right {
+    width: auto;
+    margin: 0 auto;
+  }
+
+  #room .concept .title-box .box-right h2 {
+    width: auto;
+    font-size: 35px;
+  }
+
+  #room .concept .title-box .box-right p {
+    color: #f6f0e6;
+    padding: 10px;
+    width: auto;
+  }
+
+  #room .scrolldown2 {
+    width: auto;
+    position: relative;
+    top: 770px;
+    left: 0;
+  }
+
+  #room .roompage {
+    width: auto;
+  }
+
+  #room .roompage h2 {
+    width: auto;
+    padding: 20px;
+  }
+
+  #room .roompage .rooms {
+    width: auto;
+  }
+
+  #room .roompage .rooms .page-01 {
+    display: block;
+    width: auto;
+  }
+
+  #room .roompage .rooms .page-even {
+    width: auto;
+    margin-right: 0;
+  }
+
+  #room .roompage .rooms .page-even h3 {
+    width: auto;
+  }
+
+  #room .roompage .rooms .page-even img {
+    width: 330px;
+  }
+
+  #room .roompage .rooms .page-even p {
+    padding: 5px 30px 5px 30px;
+    text-align: left;
+  }
+
+  #room .roompage .rooms .page-odd {
+    width: auto;
+    margin-left: 0;
+  }
+
+  #room .roompage .rooms .page-odd img {
+    width: 330px;
+  }
+
+  #room .roompage .rooms .page-odd p {
+    padding: 5px 30px 5px 30px;
+    text-align: left;
+  }
+
+  #room .roompage .rooms .page-02 {
+    display: block;
+    width: auto;
+  }
+
+  #room .roompage .rooms .page-03 {
+    display: block;
+    width: auto;
+  }
+
+  #room .roompage .rooms .page-04 {
+    display: block;
+    width: auto;
+  }
+
+  #room .roompage .rooms .page-04 .page-odd h3.name {
+    font-size: 22px;
+  }
+
+  #room .store .store-info {
+    width: auto;
+  }
+
+  #room .store .store-info h2 {
+    width: auto;
+  }
+
+  #room .store .store-info img {
+    width: 330px;
+  }
+
+  #room .store .store-info h3 {
+    padding-left: 10px;
+  }
+
+  #room .store .store-info p {
+    padding: 10px;
+    text-align: left;
+  }
+
+  #room .contact .form p {
+    padding: 20px;
+    text-align: left;
+  }
+
+  #room .contact .form address {
+    width: auto;
+    height: auto;
+    margin: 10px;
+  }
+
+  #room .contact .form address p {
+    padding: 5px;
+  }
+
+  #room .global-nav {
+    width: auto;
+    margin-top: -80px;
+  }
+
+  #room .global-nav ul {
+    display: block;
+    width: auto;
+  }
+
+  #room .global-nav ul li h2 {
+    margin-bottom: 15px;
+  }
+
+  #room .global-nav ul li p {
+    margin-bottom: 45px;
+  }
+
+  #room footer {
+    display: block;
+  }
+
+  #room footer h1 {
+    font-size: 70px;
+    line-height: 1.4;
+    margin: 0 auto;
+  }
+
+  #room footer .window-bottom {
+    position: relative;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  #room footer .scroll {
+    position: relative;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  #room footer .scrolldown3 {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+  }
+
+  #room footer .bottom-box {
+    margin-top: 150px;
+  }
+
+  #room footer .bottom-box .point {
+    position: relative;
+    top: -110px;
+    left: 200px;
+    width: 10px;
+    height: 10px;
+  }
+
+  #room footer .bottom-box .bottom-wrapper {
+    display: block;
+    padding: 0;
+    width: auto;
+    margin: 0;
+  }
+
+  #room footer .bottom-box .bottom-wrapper p {
+    margin-bottom: 30px;
+  }
+
+  #room footer .bottom-box .bottom-wrapper address {
+    margin-bottom: 50px;
+  }
+
+  #room footer .navi ul {
+    flex-wrap: wrap;
+  }
+
+  #room footer .navi ul li {
+    width: 50%;
+  }
+
+  /* -----------------------
+  info
+  -------------------------*/
+
+  #info header {
+    display: none;
+    width: auto;
+  }
+
+  #info footer {
+    display: block;
+  }
+
+  #info footer h1 {
+    font-size: 70px;
+    line-height: 1.4;
+    margin: 0 auto;
+  }
+
+  #info footer .window-bottom {
+    position: relative;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  #info footer .scroll {
+    position: relative;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  #info footer .scrolldown3 {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+  }
+
+  #info footer .bottom-box {
+    margin-top: 150px;
+  }
+
+  #info footer .bottom-box .point {
+    position: relative;
+    top: -110px;
+    left: 200px;
+    width: 10px;
+    height: 10px;
+  }
+
+  #info footer .bottom-box .bottom-wrapper {
+    display: block;
+    padding: 0;
+    width: auto;
+    margin: 0;
+  }
+
+  #info footer .bottom-box .bottom-wrapper p {
+    margin-bottom: 30px;
+  }
+
+  #info footer .bottom-box .bottom-wrapper address {
+    margin-bottom: 50px;
+  }
+
+  #info footer .navi ul {
+    flex-wrap: wrap;
+  }
+
+  #info footer .navi ul li {
+    width: 50%;
+  }
+
+  /* -----------------------
+  other
+  -------------------------*/
+
+  #other main {
+    display: none;
+  }
+
+  #other header {
+    width: auto;
+    padding-top: 200px;
+  }
+
+
+
+
+
+}
