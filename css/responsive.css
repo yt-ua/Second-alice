@@ -416,7 +416,7 @@
   }
 
   #menu .eyecatch-menu {
-    width: 360px;
+    width: auto;
 
   }
 
@@ -462,14 +462,14 @@
   }
 
 
-  #menu section.buffet .left {
+  #menu section.buffet .buffet-top .left {
     width: auto;
     margin: 0 auto;
   }
 
   #menu section.buffet .left img {
-    width: 330px;
-    margin: 0 5px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   #menu section.buffet .right {
