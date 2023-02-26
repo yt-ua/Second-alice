@@ -464,6 +464,7 @@
 
   #menu section.buffet .left {
     width: auto;
+    margin: 0 auto;
   }
 
   #menu section.buffet .left img {
